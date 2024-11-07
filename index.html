@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata-Kata Inspiratif</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <!-- Header dengan video background -->
+    <header>
+        <video autoplay muted loop id="background-video">
+            <source src="video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="header-content">
+            <h1 class="fade-in">Kata-Kata Inspiratif</h1>
+            <p id="changing-quote">"aku tidak akan pernah lupa,dimana hari itu aku mulai menyukaimu."</p>
+        </div>
+    </header>
+
+    <!-- Tombol kontrol -->
+    <div class="controls">
+        <button id="toggle-music">Matikan Musik</button>
+        <button id="toggle-darkmode">Mode Gelap</button>
+    </div>
+
+    <!-- Bagian Galeri -->
+    <section class="gallery-section">
+        <img src="awan.jpg" alt="Foto 1" class="gallery-photo zoom-in">
+        <img src="foto1.jpg" alt="Foto 2" class="gallery-photo zoom-in">
+        <img src="foto2.jpg" alt="Foto 3" class="gallery-photo zoom-in">
+    </section>
+
+    <!-- Bagian Testimoni -->
+    <section class="testimonials">
+        <h2 class="slide-in">Testimoni Pengguna</h2>
+        <div class="testimonial fade-in-up">
+            <p>"cukup jadi manusia pengagumi"</p>
+            <h3>-3726 mdpl</h3>
+        </div>
+        <div class="testimonial fade-in-up">
+            <p>"selain suka senja,aku juga suka nungguin chat dari kamu."</p>
+            <h3>-3726 mdpl</h3>
+        </div>
+        <div class="testimonial fade-in-up">
+            <p>"jika kamu benar-benar menginginkannya tetaplah menunggu sembari memperbaiki diri untuk memantaskan berada disampingnya nanti"</p>
+            <h3>- pengkhotbah 3:11</h3>
+        </div>
+    </section>
+
+    <!-- Musik autoplay -->
+    <audio id="background-music" src="lagu.mp3" autoplay loop></audio>
+
+    <script src="scriptt.js"></script>
+</body>
+</html>

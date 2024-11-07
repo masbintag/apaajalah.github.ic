@@ -1,0 +1,147 @@
+/* Style dasar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Mode Gelap */
+body.dark-mode {
+    background: #1a1a1a;
+    color: #f1f1f1;
+}
+
+/* Header dengan video background */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content {
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#changing-quote {
+    font-size: 1.5rem;
+    animation: fadeInUp 2.5s ease-in-out;
+}
+
+/* Kontrol */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff7675;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #ff4949;
+}
+
+/* Galeri dengan animasi zoom */
+.gallery-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    animation: fadeIn 2s ease;
+}
+
+.gallery-photo {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.gallery-photo.zoom-in:hover {
+    transform: scale(1.2) rotate(3deg);
+}
+
+/* Bagian Testimoni */
+.testimonials {
+    text-align: center;
+    padding: 40px;
+    background: #fafafa;
+    animation: fadeIn 2s ease;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease;
+}
+
+.testimonial {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+#changing-quote {
+    font-size: 1.5rem;
+    animation: fadeInUp 2.5s ease-in-out, colorChange 3s infinite;
+}
+
+/* Animasi perubahan warna */
+@keyframes colorChange {
+    0% { color: #ff7675; }  /* Warna merah muda */
+    25% { color: #74b9ff; } /* Warna biru muda */
+    50% { color: #55efc4; } /* Warna hijau muda */
+    75% { color: #ffeaa7; } /* Warna kuning muda */
+    100% { color: #fd79a8; } /* Warna merah muda lain */
+}
